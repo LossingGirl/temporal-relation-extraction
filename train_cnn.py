@@ -417,10 +417,10 @@ class ConvNet(object):
       # ----------------- YOUR CODE HERE ----------------------
       #
 
-      # loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label, logits=logits) + decay * tf.nn.l2_loss(dense_kernel))
+      loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label, logits=logits) + decay * tf.nn.l2_loss(dense_kernel))
       ############################################################
       # Lin's paper does not mention the usage of regularzation
-      loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label, logits=logits))
+      # loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label, logits=logits))
 
       
       # cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label, logits=logits)
